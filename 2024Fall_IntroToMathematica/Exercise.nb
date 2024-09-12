@@ -1,0 +1,205 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"September"," ","workshop"," ","draft"}],
+"Title",ExpressionUUID -> "b4b74f22-37de-4167-8a75-d7391d2e1c52"],Cell[
+TextData[
+StyleBox["Exercise",FontSize -> 48]],"Text",ExpressionUUID -> "9aa955fe-df60-4355-8ede-8e575ba13d69"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{RowBox[{"(*"," ",RowBox[{"You"," ","can"," ","add"," ","comments"," ","to"," ","code"," ","blocks"," ","if"," ","you"," ","want"," ","to"," ","give"," ","more"," ","details"," ","inside"," ","the"," ","code"," ","lines"}],"*)"}],"\n",RowBox[
+{"reagentList"," ","="," ",RowBox[{"{",RowBox[{"\"template\"",","," ","\"matermix\"",",","\"primer1\"",",","\"primer2\""}],"}"}]," "}]}],"\n",RowBox[
+{"volumeList"," ","="," ",RowBox[{"{",RowBox[{RowBox[{"0.03","mL"}],",",RowBox[{"0.025","mL"}],","," ",RowBox[
+{"0.05","mL"}],","," ",RowBox[{"0.05","mL"}]}],"}"}]}]}],"Input",CellLabel -> "In[20]:= ",
+ExpressionUUID -> "a70415a5-b917-42ab-b558-c966969975a5"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"\"template\"",",","\"matermix\"",",","\"primer1\"",",","\"primer2\""}],"}"}],StandardForm],
+"Output",CellLabel -> "Out[20]= ",ExpressionUUID -> "6a0b1c2f-d966-4d98-8a74-b5adce292c89"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"0.03`"," ","mL"}],",",RowBox[{"0.025`"," ","mL"}],",",RowBox[
+{"0.05`"," ","mL"}],",",RowBox[{"0.05`"," ","mL"}]}],"}"}],StandardForm],"Output",
+CellLabel -> "Out[21]= ",ExpressionUUID -> "3c115bba-e87e-48de-8e60-55982a7516d8"]},
+Open],ExpressionUUID -> "a06807c6-5cf3-4f05-ac08-b20b031b354d"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"What"," ","is"," ","the"," ","output"," ","of"," ","the"," ","following"," ","block","?"}],
+"Subtitle",ExpressionUUID -> "d597e869-727e-4823-9a09-044ba7bf772d"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","1","]"}],"]"}],","," ",RowBox[
+{"volumeList","[",RowBox[{"[","1","]"}],"]"}]}],"}"}]],"Input",CellLabel -> "In[22]:= ",
+ExpressionUUID -> "2ed41893-462e-4136-bfe7-77a63aeb3efd"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"\"template\"",",",RowBox[{"0.03`"," ","mL"}]}],"}"}],StandardForm],"Output",CellLabel -> "Out[22]= ",
+ExpressionUUID -> "2c2656c3-d530-4151-87c4-c84bc134c5b4"]},Open],ExpressionUUID -> "39ee9184-1c1f-44ae-9a34-f73a0341c35e"]},
+Open],ExpressionUUID -> "185b877c-f9da-4c6f-97a4-7ae61d71b7d3"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Use"," ","list"," ","slicing"," ","to"," ","extract"," ","the"," ","name"," ","and"," ","volume"," ","of"," ","the"," ","3rd"," ","reagent"}],
+"Subtitle",ExpressionUUID -> "6b131c16-c864-4e1e-bfb2-1a80a1efd381"],Cell[
+BoxData[
+RowBox[{"(*",RowBox[{"write"," ","answer"," ","here"}],"*)"}]],"Input",ExpressionUUID -> "5df0d5a1-4e76-45c4-8fd6-b711aa40ebbe"]},
+Open],ExpressionUUID -> "debaee3a-4d9b-4559-bfb9-a278390452e7"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"For"," ","convenience",StyleBox[RowBox[{","," "}]],"we'd"," ","like"," ","to"," ","map"," ","each"," ","reagent"," ","with"," ","their"," ","concentration",StyleBox[
+RowBox[{"."," "}]],"\n","What's"," ","a"," ","good"," ","data"," ","structure"," ","to"," ","store"," ","this"," ","information","?\n","\n","1) ",StyleBox[
+"List",FontWeight -> Bold]}],"Subtitle",ExpressionUUID -> "e50f1e82-4b49-4509-95f8-73abb4302074"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"reagentVolList"," ","="," ",RowBox[{"{","\n","    ",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","1","]"}],"]"}],","," ",RowBox[
+{"volumeList","[",RowBox[{"[","1","]"}],"]"}]}],"}"}],",","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","2","]"}],"]"}],","," ",RowBox[
+{"volumeList","[",RowBox[{"[","2","]"}],"]"}]}],"}"}],",","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","3","]"}],"]"}],","," ",RowBox[
+{"volumeList","[",RowBox[{"[","3","]"}],"]"}]}],"}"}],",","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","4","]"}],"]"}],","," ",RowBox[
+{"volumeList","[",RowBox[{"[","4","]"}],"]"}]}],"}"}]}],"\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]","}"}]}]],
+"Input",CellLabel -> "In[23]:= ",ExpressionUUID -> "069f105a-5723-4850-b77b-6aab1da0ae7e"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"\"template\"",",",RowBox[{"0.03`"," ","mL"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"\"matermix\"",",",RowBox[{"0.025`"," ","mL"}]}],"}"}],",",RowBox[{"{",RowBox[
+{"\"primer1\"",",",RowBox[{"0.05`"," ","mL"}]}],"}"}],",",RowBox[{"{",RowBox[{"\"primer2\"",",",RowBox[
+{"0.05`"," ","mL"}]}],"}"}]}],"}"}],StandardForm],"Output",CellLabel -> "Out[23]= ",
+ExpressionUUID -> "b50d2ac4-c26b-464c-a1b6-0513ab1739e2"]},Open],ExpressionUUID -> "6236af34-3231-45e6-8451-7087522fe553"]},
+Open],ExpressionUUID -> "e1b59db0-c13e-40cf-92ea-1031abd8dd24"],Cell[
+CellGroupData[
+{Cell[
+TextData[{" ","Now",StyleBox[RowBox[{","," "}]],"extract"," ","the"," ","volume"," ","to"," ","used"," ","for"," ","primer1"," "}],
+"Subtitle",ExpressionUUID -> "84ef67cf-fd39-4150-bc3a-3133876a11fe"],Cell[
+BoxData[
+RowBox[{"(*"," ",RowBox[{"write"," ","your"," ","answer"," ","here"}]," ","*)"}]],
+"Input",ExpressionUUID -> "305d3d46-1bcf-4675-99ea-173ff9088ba0"]},Open],ExpressionUUID -> "b8bb2648-eb1b-437c-860d-45556c05c9c6"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"2",StyleBox[RowBox[{")"," "}]],StyleBox["Association",FontWeight -> Bold]," ","\n","Association"," ","works"," ","like",StyleBox[
+RowBox[{" ","\""}]],"dictionaries",StyleBox[RowBox[{"\","," "}]],"word",StyleBox[
+RowBox[{" ","->"," "}]],"meaning"}],"Subtitle",ExpressionUUID -> "4cdecb38-6019-4a79-a426-ec722bd9a557"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"reagentVolAssociation"," ","="," ",RowBox[{"<|","\n","    ",RowBox[
+{RowBox[{RowBox[{"reagentList","[",RowBox[{"[","1","]"}],"]"}]," ","\[Rule]"," ",RowBox[
+{"volumeList","[",RowBox[{"[","1","]"}],"]"}]}],",","  ","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{RowBox[{"reagentList","[",RowBox[{"[","2","]"}],"]"}]," ","\[Rule]"," ",RowBox[{"volumeList","[",RowBox[
+{"[","2","]"}],"]"}]}],",","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{RowBox[{"reagentList","[",RowBox[{"[","3","]"}],"]"}]," ","\[Rule]"," ",RowBox[{"volumeList","[",RowBox[
+{"[","3","]"}],"]"}]}],",","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{RowBox[{"reagentList","[",RowBox[{"[","4","]"}],"]"}]," ","\[Rule]"," ",RowBox[{"volumeList","[",RowBox[
+{"[","4","]"}],"]"}]}]}],"\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]","|>"}]}]],
+"Input",CellLabel -> "In[24]:= ",ExpressionUUID -> "95b8988d-017b-4403-a2e4-3e5fe69b0dd0"],Cell[
+BoxData[
+RowBox[{"\[LeftAssociation]",RowBox[{RowBox[{"\"template\"","\[Rule]",RowBox[{"0.03`"," ","mL"}]}],",",RowBox[
+{"\"matermix\"","\[Rule]",RowBox[{"0.025`"," ","mL"}]}],",",RowBox[{"\"primer1\"","\[Rule]",RowBox[
+{"0.05`"," ","mL"}]}],",",RowBox[{"\"primer2\"","\[Rule]",RowBox[{"0.05`"," ","mL"}]}]}],"\[RightAssociation]"}],
+StandardForm],"Output",CellLabel -> "Out[24]= ",ExpressionUUID -> "3d1520a1-7269-4731-8396-be4759b61851"]},
+Open],ExpressionUUID -> "90fe6c9c-1a07-4181-b9d0-2d2fdda1eb1d"]},Open],ExpressionUUID -> "bcfdbf13-d401-4347-9914-5dfe6fbcfa40"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"We"," ","can"," ","access"," ","the"," ","volume"," ","to"," ","used"," ","for"," ","primer1"," ","by"," ","getting"," ","the"," ","entry"," ","for",StyleBox[
+RowBox[{" ","\""}]],"primer1","\""}],"Subtitle",ExpressionUUID -> "5b2f919b-e102-45df-8ea5-9d1a9764fe75"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"reagentVolAssociation","[",RowBox[{"[","\"primer1\"","]"}],"]"}]],
+"Input",CellLabel -> "In[7]:= ",ExpressionUUID -> "ab6aa71a-8d5a-4c75-b501-78c9f258fb6a"],Cell[
+BoxData[
+RowBox[{"0.05`"," ","mL"}],StandardForm],"Output",CellLabel -> "Out[7]= ",ExpressionUUID -> "3de5c63d-ea34-4579-acf9-85270424d76f"]},
+Open],ExpressionUUID -> "e5935ae7-2b91-40bd-b2a6-55eb2c525d26"]},Open],ExpressionUUID -> "0f33c935-7200-44e0-9560-22da5bc4f79f"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Writing"," ","each"," ","entry"," ","on",StyleBox[RowBox[{" ","`"}]],"reagentVolAssociation",StyleBox[
+RowBox[{"`"," "}]],"can"," ","become"," ","tedious"," ","if"," ","we"," ","are"," ","using"," ","more"," ","solutions",StyleBox[
+RowBox[{"."," "}]],"Fortunately",StyleBox[RowBox[{","," "}]],"we"," ","can",StyleBox[
+RowBox[{" ","\""}]],"automate",StyleBox[RowBox[{"\""," "}]],"this"," ","process"," ","with"," ","a"," ","Loop",StyleBox[
+RowBox[{","," "}]],"using"," ","Table",":"}],"Subtitle",ExpressionUUID -> "706c05f7-0691-480a-9566-d38fe9e51867"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"newReagentVolList"," ","="," ",RowBox[{"Table","[","\n","    ",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","i","]"}],"]"}],","," ","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{"volumeList","[",RowBox[{"[","i","]"}],"]"}]}],"}"}],","," ","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]",RowBox[
+{"{",RowBox[{"i",",","1",",","4"}],"}"}]}],"]"}]}]],"Input",CellLabel -> "In[26]:= ",
+ExpressionUUID -> "5fd5fd8e-9e9c-40a7-8ee4-4e3a2d52df7a"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"\"template\"",",",RowBox[{"0.03`"," ","mL"}]}],"}"}],",",RowBox[
+{"{",RowBox[{"\"matermix\"",",",RowBox[{"0.025`"," ","mL"}]}],"}"}],",",RowBox[{"{",RowBox[
+{"\"primer1\"",",",RowBox[{"0.05`"," ","mL"}]}],"}"}],",",RowBox[{"{",RowBox[{"\"primer2\"",",",RowBox[
+{"0.05`"," ","mL"}]}],"}"}]}],"}"}],StandardForm],"Output",CellLabel -> "Out[26]= ",
+ExpressionUUID -> "7ab981ca-6a86-4cff-aade-dbc156ed87e0"]},Open],ExpressionUUID -> "4101ed08-4131-40ae-82df-107c291be466"]},
+Open],ExpressionUUID -> "553d8cc8-9d0c-4847-a6f6-15368690ccac"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"To"," ","use"," ","loops"," ","with"," ","associations",":"}],"Subtitle",
+ExpressionUUID -> "e595bdc7-1a96-457c-9f82-6f146521d5a9"],Cell[
+BoxData[{RowBox[{RowBox[
+{"(*",RowBox[{"initializing"," ","the"," ","dictionary"}]," ","*)"}],"\n",RowBox[
+{"newReagentVolAssociation"," ","="," ",RowBox[{"Association","[","]"}]," "}]}],"\n",RowBox[
+{"For","[",RowBox[{RowBox[{"i","=","1"}],","," ",RowBox[{"i","\[LessEqual]","4"}],","," ",RowBox[
+{"i","++"}],","," ","\n",RowBox[{"(*",RowBox[{"append"," ","adds"," ","a"," ","new"," ","entry"," ","to"," ","an"," ","empty"," ",RowBox[
+{"array","/","dictionary"}]}]," ","*)"}],"\n","    ",RowBox[{"AppendTo","[",RowBox[
+{"newReagentVolAssociation",",",RowBox[{RowBox[{"reagentList","[",RowBox[{"[","i","]"}],"]"}]," ","\[Rule]"," ",RowBox[
+{"volumeList","[",RowBox[{"[","i","]"}],"]"}]}]}]," ","]"}]}]," \[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]","\n","\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]","]"}]}],
+"Input",CellLabel -> "In[34]:= ",ExpressionUUID -> "661fe4ef-3324-495d-951a-b5769c5bd581"]},
+Open],ExpressionUUID -> "aade5af7-406f-48a9-aea2-d45211ddb98a"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Make"," ","serial"," ","dilutions"," "}],"Subtitle",ExpressionUUID -> "78653913-bf54-4f36-afa7-d7ce07029be5"],Cell[
+TextData[
+{StyleBox["To",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["make",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["the",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"stock",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["solution",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["of",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"primer",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["1",FontSize -> 16],StyleBox[
+RowBox[{StyleBox[",",FontSize -> 16],StyleBox[" ",FontSize -> 16]}]],StyleBox["we",
+FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["need",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["to",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"first",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["do",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["a",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"serial",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["dilution",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["from",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"a",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["more",FontSize -> 16],StyleBox[
+" ",FontSize -> 16],StyleBox["concentrated",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox[
+"stock",FontSize -> 16],StyleBox[" ",FontSize -> 16],StyleBox["solution",FontSize -> 16],"\n","1","\t","2",StyleBox[
+RowBox[{"\t"," "," "," "," "," "}]],"3",StyleBox[RowBox[{"\t"," "," "," "," "," "}]],"4","\n","2"," ","M",StyleBox[
+RowBox[{"\[RightArrow]"," "}]],"20"," ","mM",StyleBox[RowBox[{" ","\[RightArrow]"," "}]],"200"," ","uM",StyleBox[
+RowBox[{" ","\[RightArrow]"," "}]],"2uM","\n"," ","5ul",StyleBox[RowBox[{" ","+"," "}]],"95ul","\n","\t","5ul",StyleBox[
+RowBox[{" ","+"," "}]],"95ul","\n",StyleBox[RowBox[{"\t","\t"," "," "," "," "," "," "}]],"5ul",StyleBox[
+RowBox[{" ","\[RightArrow]"," "}]],"95ul"," ","\n","\[NonBreakingSpace]","What's"," ","a"," ","good"," ","way"," ","to"," ","store"," ","this"," ","information"," ","so"," ","it's"," ","easy"," ","to"," ","extract"," ","any"," ","subset"," ","as"," ","needed","? "}],
+"Text",ExpressionUUID -> "5e5c89f3-5ab7-4a81-9d23-dd7cc8f97b29"],Cell[
+CellGroupData[
+{Cell[
+BoxData[{RowBox[{"primer1Tube1"," ","="," ",RowBox[{"{",RowBox[{"100",","," ","0",","," ","5"}],"}"}]," ",RowBox[
+{"(*",RowBox[{"{",RowBox[{"total",","," ","in",","," ","out"}],"}"}],"*)"}]}],"\n",RowBox[
+{"primer1Tube2"," ","="," ",RowBox[{"{",RowBox[{"95",","," ","5",","," ","5"}],"}"}]}],"\n",RowBox[
+{"primer1Tube3"," ","="," ",RowBox[{"{",RowBox[{"95",","," ","5",","," ","5"}],"}"}]}],"\n",RowBox[
+{"primer1Tube4"," ","="," ",RowBox[{"{",RowBox[{"95",","," ","5",","," ","0"}],"}"}]," ",RowBox[
+{"(*",RowBox[{"this"," ","would"," ","be"," ","the"," ","working"," ","solution"}],"*)"}]}]}],
+"Code",CellLabel -> "In[28]:= ",ExpressionUUID -> "293f06f3-087a-46d1-8757-d1db1e231841"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"100",",","0",",","5"}],"}"}],StandardForm],"Output",CellLabel -> "Out[28]= ",
+ExpressionUUID -> "44569ccc-2c7b-4d64-b422-435ab4028e59"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"95",",","5",",","5"}],"}"}],StandardForm],"Output",CellLabel -> "Out[29]= ",ExpressionUUID -> "a5745f75-adce-4272-bfca-7325f882d4b3"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"95",",","5",",","5"}],"}"}],StandardForm],"Output",CellLabel -> "Out[30]= ",
+ExpressionUUID -> "20e04fe8-4f39-40bd-9bd0-df66c6ced509"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{"95",",","5",",","0"}],"}"}],StandardForm],"Output",CellLabel -> "Out[31]= ",ExpressionUUID -> "df62541f-29dc-4ec8-866f-2aa635c72a24"]},
+Open],ExpressionUUID -> "854f531c-d214-4d3e-a13f-30a6c7d5f800"],Cell[
+TextData[{"That's"," ","lots"," ","of"," ","variables"," ","to"," ","manage",StyleBox[
+RowBox[{"."," "}]],"Now"," ","let's"," ","create"," ","a"," ","single"," ","variable"," ","to"," ","store"," ","all"," ","the"," ","tubes"," ","for"," ","primer1"}],
+"Text",ExpressionUUID -> "7169a9a3-8a62-41eb-bfa6-c768129774ff"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"primer1Tubes","=",RowBox[{"{",RowBox[{"primer1Tube1",","," ","primer1Tube2",","," ","primer1Tube3",","," ","primer1Tube4"}],"}"}]}]],
+"Code",CellLabel -> "In[32]:= ",ExpressionUUID -> "45ac1869-7d32-4cb0-8813-f7d0bd7a45ee"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{"100",",","0",",","5"}],"}"}],",",RowBox[
+{"{",RowBox[{"95",",","5",",","5"}],"}"}],",",RowBox[{"{",RowBox[{"95",",","5",",","5"}],"}"}],",",RowBox[
+{"{",RowBox[{"95",",","5",",","0"}],"}"}]}],"}"}],StandardForm],"Output",CellLabel -> "Out[32]= ",
+ExpressionUUID -> "30c2d147-6520-4f6e-aad5-b50770d9abfb"],Cell[
+BoxData[RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{"100",",","0",",","5"}],"}"}],",",RowBox[{"{",RowBox[{"95",",","5",",","5"}],"}"}],",",RowBox[
+{"{",RowBox[{"95",",","5",",","5"}],"}"}],",",RowBox[{"{",RowBox[{"95",",","5",",","0"}],"}"}]}],"}"}],
+StandardForm],"Output",CellLabel -> "Out[18]= ",ExpressionUUID -> "89d3661b-d044-47d4-833a-962d03a369f4"]},
+Open],ExpressionUUID -> "81d9b175-4c83-4dbb-bece-a2a408e6fbc8"]},Open],ExpressionUUID -> "2f28d370-b6a1-4acb-86d2-02559bdcc07f"]},
+Open],ExpressionUUID -> "388c6b32-a3df-4686-ac61-a1a4cdbfef8c"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.1 for Wolfram Cloud 1.69 (July 16, 2024)"]
