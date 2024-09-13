@@ -1,0 +1,470 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     19048,        462]
+NotebookOptionsPosition[     15619,        396]
+NotebookOutlinePosition[     16048,        413]
+CellTagsIndexPosition[     16005,        410]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Mathematica Workshop - Problem Set", "Title",
+ CellChangeTimes->{{3.935153547310358*^9, 3.9351535689312477`*^9}, {
+   3.9351586811437063`*^9, 3.935158696098303*^9}, 3.935179684075149*^9, {
+   3.935181360317028*^9, 
+   3.935181366375555*^9}},ExpressionUUID->"388c6b32-a3df-4686-ac61-\
+a1a4cdbfef8c"],
+
+Cell["\<\
+The problem set for the workshop \[OpenCurlyDoubleQuote]Quick intro to \
+Mathematica, CloudLab\[CloseCurlyQuote]s symbolic language.\
+\[CloseCurlyDoubleQuote] 
+(By Alfredo Gonzalez-Espinoza and Huajin Wang @ Carnegie Mellon University. \
+September 2024. ) 
+\
+\>", "Text",
+ CellChangeTimes->{{3.935178681944394*^9, 3.935178834050802*^9}, {
+   3.9351790337273273`*^9, 3.9351791171832647`*^9}, 3.935179165523941*^9, {
+   3.935179312438274*^9, 3.935179321529998*^9}, {3.935180847035219*^9, 
+   3.9351808675122957`*^9}},ExpressionUUID->"3cc178d9-68cf-476a-9a9e-\
+43f1e887448a"],
+
+Cell[CellGroupData[{
+
+Cell["The Context", "Subsubsection",
+ CellChangeTimes->{{3.935179135102585*^9, 
+  3.9351791590861483`*^9}},ExpressionUUID->"831ce330-b7f1-4a9a-aa37-\
+8b0e82857bde"],
+
+Cell[TextData[StyleBox["We are designing an experiment that requires four \
+reagents. Each reagent has a name and a corresponding volume as follows: \n\t\
+\ttemplate: 3 uL\n\t\tmastermix: 2.5 uL\n\t\tprimer1: 5 uL\n\t\tprimer2: 5 uL\
+\nIn the following problem set, we want to explore how to store the \
+information of these reagents in variables and extract information as needed, \
+using the programming language Mathematica. \n", "Text",
+ FontSize->14]], "Text",
+ CellChangeTimes->{{3.9351791700644617`*^9, 3.935179306523635*^9}, {
+  3.935179391189289*^9, 
+  3.93517949314611*^9}},ExpressionUUID->"a8eae3bd-1b7f-4ec2-81e2-\
+65353d042c61"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["List Creation and Manipulations. ", "Subsubsection",
+ FontSize->18]], "ItemNumbered",
+ CellChangeTimes->{{3.9351582039589376`*^9, 3.935158383516643*^9}, {
+  3.935158419993739*^9, 3.935158663901127*^9}, {3.935158757318783*^9, 
+  3.935158784852592*^9}, {3.935158827038047*^9, 3.935158828301388*^9}, {
+  3.935158981733811*^9, 3.935159007794539*^9}, {3.9351591173867073`*^9, 
+  3.93515918021703*^9}, {3.935159218313274*^9, 
+  3.9351592261746597`*^9}},ExpressionUUID->"287f20db-09c5-4535-9c22-\
+3296f4c39722"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Create two Lists to store the reagent names and their \
+corresponding volumes. Let\[CloseCurlyQuote]s name the two Lists ", "Text",
+  FontSize->14],
+ StyleBox[Cell[BoxData[
+  RowBox[{"reagentList", " "}]], "Text", "InlineCode",
+  FontSize->14,ExpressionUUID->"a8607eb5-9b10-4533-9a50-461c480f9ace"], 
+  "Text"],
+ StyleBox["and ", "Text",
+  FontSize->14],
+ StyleBox[Cell[BoxData["volumeList"], "Text", "InlineCode",
+  FontSize->14,ExpressionUUID->"878e0f71-4ddc-4f2f-bf8e-e0b63310299f"], 
+  "Text"],
+ StyleBox[", respectively. ", "Text",
+  FontSize->14]
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.9351582039589376`*^9, 3.935158383516643*^9}, {
+   3.935158419993739*^9, 3.935158663901127*^9}, {3.935158757318783*^9, 
+   3.935158784852592*^9}, {3.935158827038047*^9, 3.935158828301388*^9}, {
+   3.935158981733811*^9, 3.935159007398921*^9}, {3.9351590723951674`*^9, 
+   3.9351590758547897`*^9}, {3.935159107073948*^9, 3.935159108811185*^9}, {
+   3.9351591922375393`*^9, 3.93515919272246*^9}, {3.93515926546607*^9, 
+   3.935159380684678*^9}, {3.935159488601108*^9, 3.935159634065433*^9}, {
+   3.93515971276451*^9, 3.9351597731903543`*^9}, {3.935159882988698*^9, 
+   3.935159882991323*^9}, {3.935177759828958*^9, 3.935177762415209*^9}, {
+   3.935178887406383*^9, 3.935179031994035*^9}, 3.9351793706355886`*^9, {
+   3.935179533791754*^9, 3.935179561070733*^9}, {3.935179915529615*^9, 
+   3.935179947542357*^9}},ExpressionUUID->"52866dcc-528c-435d-860e-\
+68dbc0895e2f"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["reagentList",
+   FontSize->14], 
+  StyleBox[" ",
+   FontSize->14], 
+  StyleBox["=",
+   FontSize->14], 
+  StyleBox["  ",
+   FontSize->14], "\n", 
+  StyleBox[
+   RowBox[{"volumeList", " ", "=", " "}],
+   FontSize->14]}]], "Code",
+ CellChangeTimes->{{3.935158853005382*^9, 3.9351589288090067`*^9}, 
+   3.935158963433641*^9, {3.935159045096532*^9, 3.9351590523151493`*^9}, {
+   3.935159808013341*^9, 3.935159826501851*^9}, {3.935180838404464*^9, 
+   3.935180840297325*^9}},ExpressionUUID->"a06807c6-5cf3-4f05-ac08-\
+b20b031b354d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+List splicing. From the Lists created above, let\[CloseCurlyQuote]s take a \
+look at the third ingredient and its volume using List splicing. \
+\>", "SubitemNumbered",
+ CellChangeTimes->{{3.9351590806963997`*^9, 3.9351591057428837`*^9}, {
+  3.9351599055168962`*^9, 3.935159970119317*^9}, {3.9351600295593433`*^9, 
+  3.9351600477339153`*^9}, {3.935160088519672*^9, 3.935160100768475*^9}, {
+  3.935160135760345*^9, 3.93516015475758*^9}, {3.935160279796612*^9, 
+  3.935160309684558*^9}, {3.935160655835359*^9, 3.935160670304344*^9}, {
+  3.9351614006696568`*^9, 3.935161402188583*^9}, {3.935177765541562*^9, 
+  3.935177790802041*^9}, {3.9351799736831093`*^9, 
+  3.935179986108781*^9}},ExpressionUUID->"185b877c-f9da-4c6f-97a4-\
+7ae61d71b7d3"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{
+  3.93516007545195*^9, {3.935160114693214*^9, 3.935160116649312*^9}, {
+   3.935160158333496*^9, 3.935160171554646*^9}, 
+   3.935180944213666*^9},ExpressionUUID->"39ee9184-1c1f-44ae-9a34-\
+f73a0341c35e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Organize the output from 1.2 in a list so that it\[CloseCurlyQuote]s easier \
+to manage. \
+\>", "SubitemNumbered",
+ CellChangeTimes->{{3.935160193521884*^9, 3.935160226956037*^9}, {
+  3.93518000726068*^9, 
+  3.93518008022546*^9}},ExpressionUUID->"1f26d514-c23c-4481-88ac-\
+50cf59c3a42f"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.935160230448258*^9, 3.935160244960979*^9}, 
+   3.935180950578423*^9},ExpressionUUID->"f75d3d19-89e7-4353-92ec-\
+57d11de37b53"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Nested List. Building on the result from 1.3, we'd like to organize all the \
+ingredients and their their volumes in a Nested List, so that we can \
+conveniently look up each ingredient and their corresponding volume. Let\
+\[CloseCurlyQuote]s call this Nested List ",
+ Cell[BoxData[
+ "reagentVolList"], "InlineCode",ExpressionUUID->
+  "e52df403-c09f-46fc-bdf3-56d42626c99b"],
+ ". "
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.935160471880093*^9, 3.935160530347241*^9}, {
+  3.9351605696078444`*^9, 3.9351606488237534`*^9}, {3.935160823075891*^9, 
+  3.9351608647323313`*^9}, {3.9351777414457417`*^9, 3.9351777462823563`*^9}, {
+  3.9351801076786947`*^9, 
+  3.935180120847089*^9}},ExpressionUUID->"5a54eabe-dff7-4455-9298-\
+d8cf12d6aa8f"],
+
+Cell[BoxData[
+ RowBox[{"reagentVolList", " ", "=", " ", 
+  RowBox[{
+  "{", "\n", "\n", "\n", "\n", 
+   "\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\
+\[NonBreakingSpace]", "}"}]}]], "Code",
+ CellChangeTimes->{{3.9351809584150057`*^9, 
+  3.9351809613418083`*^9}},ExpressionUUID->"6236af34-3231-45e6-8451-\
+7087522fe553"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox[" Now, extract the information about the third \
+ingredient and its volume. ", "ItemNumbered"]], "SubitemNumbered",
+ CellChangeTimes->{
+  3.935161022451631*^9, {3.935161071925098*^9, 3.935161100248239*^9}, 
+   3.935180152290091*^9},ExpressionUUID->"a9415f00-cedd-4460-ad42-\
+d7a230a61240"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{{3.935161107527464*^9, 3.93516112455156*^9}, 
+   3.9351809847213097`*^9},ExpressionUUID->"adc8d070-7970-43b2-a2d0-\
+bb279ea02403"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Association ", "Subsubsection"]], "ItemNumbered",
+ CellChangeTimes->{{3.935161199640167*^9, 
+  3.9351612024055033`*^9}},ExpressionUUID->"ed10e52f-4e88-4c93-a648-\
+9fc1f2464388"],
+
+Cell["\<\
+Now, we want to further improve the way we organize all the ingredients and \
+their their volumes so we\[CloseCurlyQuote]d be able to look up the volume \
+used for each ingredient by their names. Let\[CloseCurlyQuote]s use \
+Association as the data structure to accomplish this. \
+\>", "Text",
+ CellChangeTimes->{{3.935161219011621*^9, 3.935161389797927*^9}, {
+   3.935161421729834*^9, 3.9351614454896317`*^9}, 3.935161648280958*^9, 
+   3.935161726359421*^9, {3.935176847249372*^9, 3.935176872442182*^9}, 
+   3.935176909148241*^9, 3.935177081855503*^9, {3.9351801973845873`*^9, 
+   3.935180227454693*^9}},ExpressionUUID->"bcfdbf13-d401-4347-9914-\
+5dfe6fbcfa40"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Create an Association named ",
+ Cell[BoxData[
+ "reagentVolAssociation"], "InlineCode",ExpressionUUID->
+  "1e0b2132-6315-466c-8928-26af8b858bfc"],
+ ", that uses reagent names as keys and volumes as values. Hint: use the \
+Lists we created in the beginning of the exercise to create keys and values. \
+Remember, Association works like \[OpenCurlyDoubleQuote]dictionaries\
+\[CloseCurlyDoubleQuote]: key (word) -> value (meaning). "
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.935161678160591*^9, 3.9351617436620417`*^9}, {
+  3.9351768876198997`*^9, 3.935177097677868*^9}, {3.9351778299460163`*^9, 
+  3.935177832413946*^9}, {3.93518026013386*^9, 
+  3.935180260842499*^9}},ExpressionUUID->"f0069b45-1206-45d7-ab64-\
+efe29b152518"],
+
+Cell[BoxData[
+ RowBox[{"reagentVolAssociation", " ", "=", " ", "\n", "\n", "\n"}]], "Code",
+ CellChangeTimes->{{3.935180999164358*^9, 
+  3.935181002963402*^9}},ExpressionUUID->"90fe6c9c-1a07-4181-b9d0-\
+2d2fdda1eb1d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Now, let\[CloseCurlyQuote]s use the Association you created to look up what \
+volume to use for \[OpenCurlyDoubleQuote]primer1\[CloseCurlyDoubleQuote]\
+\>", "SubitemNumbered",
+ CellChangeTimes->{{3.9351617963139257`*^9, 3.935161842880959*^9}, {
+  3.9351771377531757`*^9, 
+  3.935177181973887*^9}},ExpressionUUID->"e148e02c-ca80-4184-9f06-\
+7d5a39524f68"],
+
+Cell[BoxData[""], "Code",
+ CellChangeTimes->{
+  3.935181019605384*^9},ExpressionUUID->"e5935ae7-2b91-40bd-b2a6-\
+55eb2c525d26"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Automation With Loops [Bonus]", "Subsubsection"]], \
+"ItemNumbered",
+ CellChangeTimes->{{3.9351619480601482`*^9, 3.935161952649714*^9}, {
+  3.9351773136014547`*^9, 3.9351773189764233`*^9}, {3.935178859610169*^9, 
+  3.9351788616225433`*^9}},ExpressionUUID->"6400041f-dc95-4b35-979b-\
+26a22085e1f5"],
+
+Cell["\<\
+In the exercises above (1.4 and 2.1), we repeated the same action four times \
+to create the Nested List or the Association, with the only difference being \
+the indexes.  This will become tedious if we are dealing with many more \
+ingredients. Fortunately, we can \[OpenCurlyDoubleQuote]automate\
+\[CloseCurlyDoubleQuote] this process with a Loop. \
+\>", "Text",
+ CellChangeTimes->{{3.93516197308391*^9, 3.935161984379889*^9}, {
+  3.935177210951426*^9, 3.935177290041004*^9}, {3.9351773268915997`*^9, 
+  3.9351775341938953`*^9}, {3.9351803583341427`*^9, 3.935180386875079*^9}, {
+  3.93518046365635*^9, 
+  3.935180534145455*^9}},ExpressionUUID->"bbe312dc-9dc0-4e88-a51a-\
+4a1c7c0f39ee"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Table. Complete exercise 1.4 with a loop, using the \
+\[OpenCurlyDoubleQuote]Table\[CloseCurlyDoubleQuote] function.  Let\
+\[CloseCurlyQuote]s give the resulted Nested List a new name, ",
+ Cell[BoxData[
+ "newReagentVolList"], "InlineCode",ExpressionUUID->
+  "b606a537-29f0-44df-b0a8-ef90f2b35b5b"],
+ ", so that we don\[CloseCurlyQuote]t overwrite the previous result. "
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.93517755615862*^9, 3.935177729480628*^9}, {
+  3.9351778404109697`*^9, 3.935177841394454*^9}, {3.935177996527545*^9, 
+  3.935177996868628*^9}},ExpressionUUID->"bdaa3974-f04f-4c86-a586-\
+c88e257785f4"],
+
+Cell[BoxData[
+ RowBox[{"newReagentVolList", " ", "=", " ", 
+  RowBox[{"Table", "[", "\n", "\n", "\n", "]"}]}]], "Code",
+ CellChangeTimes->{{3.9351810327726507`*^9, 
+  3.935181033828179*^9}},ExpressionUUID->"4101ed08-4131-40ae-82df-\
+107c291be466"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "For loop. Complete exercise 2.1 with a \[OpenCurlyDoubleQuote]For loop\
+\[CloseCurlyDoubleQuote]. Let\[CloseCurlyQuote]s name the resulted \
+Association ",
+ Cell[BoxData[
+ "newReagentVolAssociation"], "InlineCode",ExpressionUUID->
+  "4df90518-e8f7-4ed4-8a95-511b5b4019bb"],
+ ". To do this,  first, create an empty Association,  then,  iterate through \
+the indexes in the ",
+ Cell[BoxData[
+ "reagentList"], "InlineCode",ExpressionUUID->
+  "7704f440-00ff-469a-bee0-90c40889a2ca"],
+ " and ",
+ Cell[BoxData[
+ "volumeList"], "InlineCode",ExpressionUUID->
+  "8437c8a4-d819-483d-9b0a-fe11cea71643"],
+ ", then, add one key /value pair per iteration with ",
+ Cell[BoxData[
+  RowBox[{"AppendTo", "[", 
+   StyleBox[
+    RowBox[{"x", ",", "elem"}],
+    FontSlant->"Italic"], "]"}]], "InlineCode",ExpressionUUID->
+  "2f57c287-eb2c-4972-870d-3f1bc1a46676"],
+ " command.  Finally, it would be good to print out the value of ",
+ Cell[BoxData[
+ "newReagentVolAssociation"], "InlineCode",ExpressionUUID->
+  "da30d68c-0bb6-444b-b83b-6bc9b1085506"],
+ " so you can view the result. "
+}], "SubitemNumbered",
+ CellChangeTimes->{{3.935177882638085*^9, 3.935177885844543*^9}, {
+  3.9351779233066273`*^9, 3.935177945001214*^9}, {3.9351779828404016`*^9, 
+  3.935177986377963*^9}, {3.935178072665778*^9, 3.935178171159129*^9}, {
+  3.9351782139553013`*^9, 3.935178248117964*^9}, {3.935178283091387*^9, 
+  3.9351783547184353`*^9}, {3.935180600340716*^9, 3.935180785555464*^9}, {
+  3.9351810948347073`*^9, 
+  3.9351811434560337`*^9}},ExpressionUUID->"7f1462dd-24b1-4b51-b14a-\
+77f1dc8c9ed2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "initializing", " ", "with", " ", "an", " ", "empty", " ", "dictionary"}], 
+   "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"newReagentVolAssociation", " ", "=", " ", 
+    RowBox[{"Association", "[", "]"}]}], " ", "\n", 
+   RowBox[{"For", "[", "  ", 
+    RowBox[{",", " ", ",", " ", ",", " ", "\n", 
+     RowBox[{"(*", 
+      RowBox[{
+      "AppendTo", " ", "adds", " ", "a", " ", "new", " ", "entry", " ", "to", 
+       " ", "an", " ", "existing", " ", "Association"}], " ", "*)"}], "\n", 
+     "    ", 
+     RowBox[{"AppendTo", "[", "  ", ",", "  ", "]"}]}], 
+    " \[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\
+\[NonBreakingSpace]", "\n", 
+    "\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\
+\[NonBreakingSpace]", "]"}], "\n", 
+   "\[NonBreakingSpace]\[NonBreakingSpace]\[NonBreakingSpace]\
+\[NonBreakingSpace]", "\n", "newReagentVolAssociation"}]}]], "Code",
+ CellChangeTimes->{{3.935177898755269*^9, 3.935177904420351*^9}, {
+   3.935178038863288*^9, 3.935178059006968*^9}, {3.93517841899417*^9, 
+   3.935178578109284*^9}, {3.935181056926955*^9, 3.9351810710633*^9}, {
+   3.935181203621583*^9, 3.93518122498385*^9}, 3.9351814804430733`*^9, 
+   3.9351816521905413`*^9},ExpressionUUID->"661fe4ef-3324-495d-951a-\
+b5769c5bd581"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["The End. ", "Subsubsection",
+ CellChangeTimes->{{3.935178633645401*^9, 
+  3.935178635229826*^9}},ExpressionUUID->"b8461b02-54f1-4ca7-9a63-\
+a41db3ee7b67"]
+}, Open  ]]
+},
+WindowSize->{1148, 902},
+WindowMargins->{{Automatic, -1378}, {Automatic, -13}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"14.1 for Mac OS X ARM (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8fa66722-bcbb-4fc6-aa64-64986324f355"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 304, 5, 120, "Title",ExpressionUUID->"388c6b32-a3df-4686-ac61-a1a4cdbfef8c"],
+Cell[883, 29, 582, 12, 96, "Text",ExpressionUUID->"3cc178d9-68cf-476a-9a9e-43f1e887448a"],
+Cell[CellGroupData[{
+Cell[1490, 45, 164, 3, 54, "Subsubsection",ExpressionUUID->"831ce330-b7f1-4a9a-aa37-8b0e82857bde"],
+Cell[1657, 50, 641, 10, 220, "Text",ExpressionUUID->"a8eae3bd-1b7f-4ec2-81e2-65353d042c61"],
+Cell[CellGroupData[{
+Cell[2323, 64, 528, 8, 43, "ItemNumbered",ExpressionUUID->"287f20db-09c5-4535-9c22-3296f4c39722"],
+Cell[CellGroupData[{
+Cell[2876, 76, 1490, 28, 57, "SubitemNumbered",ExpressionUUID->"52866dcc-528c-435d-860e-68dbc0895e2f"],
+Cell[4369, 106, 562, 17, 87, "Code",ExpressionUUID->"a06807c6-5cf3-4f05-ac08-b20b031b354d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4968, 128, 748, 12, 31, "SubitemNumbered",ExpressionUUID->"185b877c-f9da-4c6f-97a4-7ae61d71b7d3"],
+Cell[5719, 142, 248, 5, 63, "Code",ExpressionUUID->"39ee9184-1c1f-44ae-9a34-f73a0341c35e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6004, 152, 297, 7, 31, "SubitemNumbered",ExpressionUUID->"1f26d514-c23c-4481-88ac-50cf59c3a42f"],
+Cell[6304, 161, 174, 3, 63, "Code",ExpressionUUID->"f75d3d19-89e7-4353-92ec-57d11de37b53"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6515, 169, 753, 15, 55, "SubitemNumbered",ExpressionUUID->"5a54eabe-dff7-4455-9298-d8cf12d6aa8f"],
+Cell[7271, 186, 332, 8, 158, "Code",ExpressionUUID->"6236af34-3231-45e6-8451-7087522fe553"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7640, 199, 312, 5, 33, "SubitemNumbered",ExpressionUUID->"a9415f00-cedd-4460-ad42-d7a230a61240"],
+Cell[7955, 206, 175, 3, 63, "Code",ExpressionUUID->"adc8d070-7970-43b2-a2d0-bb279ea02403"]
+}, Open  ]]
+}, Open  ]],
+Cell[8157, 213, 201, 3, 44, "ItemNumbered",ExpressionUUID->"ed10e52f-4e88-4c93-a648-9fc1f2464388"],
+Cell[8361, 218, 672, 11, 69, "Text",ExpressionUUID->"bcfdbf13-d401-4347-9914-5dfe6fbcfa40"],
+Cell[CellGroupData[{
+Cell[9058, 233, 744, 14, 78, "SubitemNumbered",ExpressionUUID->"f0069b45-1206-45d7-ab64-efe29b152518"],
+Cell[9805, 249, 217, 4, 134, "Code",ExpressionUUID->"90fe6c9c-1a07-4181-b9d0-2d2fdda1eb1d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10059, 258, 364, 7, 31, "SubitemNumbered",ExpressionUUID->"e148e02c-ca80-4184-9f06-7d5a39524f68"],
+Cell[10426, 267, 127, 3, 63, "Code",ExpressionUUID->"e5935ae7-2b91-40bd-b2a6-55eb2c525d26"]
+}, Open  ]],
+Cell[10568, 273, 321, 5, 44, "ItemNumbered",ExpressionUUID->"6400041f-dc95-4b35-979b-26a22085e1f5"],
+Cell[10892, 280, 696, 12, 96, "Text",ExpressionUUID->"bbe312dc-9dc0-4e88-a51a-4a1c7c0f39ee"],
+Cell[CellGroupData[{
+Cell[11613, 296, 632, 12, 55, "SubitemNumbered",ExpressionUUID->"bdaa3974-f04f-4c86-a586-c88e257785f4"],
+Cell[12248, 310, 247, 5, 134, "Code",ExpressionUUID->"4101ed08-4131-40ae-82df-107c291be466"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12532, 320, 1579, 36, 101, "SubitemNumbered",ExpressionUUID->"7f1462dd-24b1-4b51-b14a-77f1dc8c9ed2"],
+Cell[14114, 358, 1302, 28, 228, "Code",ExpressionUUID->"661fe4ef-3324-495d-951a-b5769c5bd581"]
+}, Open  ]]
+}, Open  ]],
+Cell[15443, 390, 160, 3, 54, "Subsubsection",ExpressionUUID->"b8461b02-54f1-4ca7-9a63-a41db3ee7b67"]
+}, Open  ]]
+}
+]
+*)
+
